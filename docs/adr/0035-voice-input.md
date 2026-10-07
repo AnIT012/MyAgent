@@ -20,7 +20,7 @@
 - requirements: faster-whisper, sounddevice, webrtcvad, numpy 追加。
 - 検証(2026-06-11): VOICEVOX生成wav→faster-whisper(small)で「明日の予定を教えて」を一字一句正確に文字起こし
   (モデル読込~20s/発話2.6s)。STT→core連鎖で明日のGoogle＋ローカル統合予定を読む所まで実機確認。
-  実マイク録音(VAD)はユーザーが自分のターミナルで `python voice.py` し発話＋マイク許可してE2E（マイク検出済: しょすけ Microphone）。
+  実マイク録音(VAD)はユーザーが自分のターミナルで `python voice.py` し発話＋マイク許可してE2E（マイク検出済: Mac の Microphone）。
 
 ## 残/将来
 - レイテンシ最適化（ストリーミングSTT・バージイン・フィラー埋め）は次段（ADR検討時の議論メモ参照）。
