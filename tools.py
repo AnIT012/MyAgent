@@ -36,6 +36,8 @@ BASE = Path(__file__).parent
 # 2層（新）
 AUTO_CONFIG_PATH = BASE / "config.auto.json"
 USER_CONFIG_PATH = BASE / "config.user.json"
+# 手元だけの上書き（コミットしない）。学校の URL など、公開リポジトリに置きたくない sites はここに書く
+LOCAL_CONFIG_PATH = BASE / "config.local.json"
 
 # 旧・単一config（後方互換フォールバック）
 _LEGACY_NAME = "config_mac.json" if IS_MAC else "config_win.json"
@@ -91,6 +93,9 @@ def load_config() -> dict:
     """
     auto = _read_json(AUTO_CONFIG_PATH)
     user = _read_json(USER_CONFIG_PATH)
+    local = _read_json(LOCAL_CONFIG_PATH)
+    if local.get("sites"):
+        user = {**user, "sites": {**user.get("sites", {}), **local["sites"]}}
 
     # どちらの新ファイルも無ければ旧configにフォールバック
     if not auto and not user:
