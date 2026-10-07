@@ -23,8 +23,8 @@ _WD_JA = ["月", "火", "水", "木", "金", "土", "日"]  # datetime.weekday()
 def _empty() -> dict:
     return {
         "user": {},               # {"name": "...", "call": "..."}
-        "facts": [],              # 自由記述の事実（「彼女はあやさん」等）
-        "places": {},             # 場所語の解決表 {"大学": "茨木", ...}（天気・移動用）
+        "facts": [],              # 自由記述の事実（「彼女はAさん」等）
+        "places": {},             # 場所語の解決表 {"大学": "大阪", ...}（天気・移動用）
         "default_location": "",   # 場所未指定時の既定地名
         "schedule": {"weekly": [], "dated": []},
         # weekly: {"weekday": "金", "time": "19:00", "title": "塾"}

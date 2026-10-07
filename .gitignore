@@ -19,6 +19,7 @@ config.auto.json
 
 # 手元だけの上書き（学校の URL など。公開しない）
 config.local.json
+persona.local.txt
 
 # OS
 Thumbs.db

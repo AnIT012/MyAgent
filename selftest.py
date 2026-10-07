@@ -93,8 +93,8 @@ ok(tools.monitor_count() >= 1, "monitor_count>=1")
 section("profile_store 記憶・予定")
 import profile_store as ps
 ps.PROFILE_PATH = TMP / "profile.json"
-ok("覚えました" in ps.remember("彼女はあやさん"), "remember 1件目")
-ok("既に覚えて" in ps.remember("彼女はあやさん"), "remember 重複スキップ")
+ok("覚えました" in ps.remember("彼女はAさん"), "remember 1件目")
+ok("既に覚えて" in ps.remember("彼女はAさん"), "remember 重複スキップ")
 ok("覚える内容が空" in ps.remember("  "), "remember 空")
 # 毎週
 r = ps.add_schedule("塾", weekday="金", time="19:00")
@@ -110,7 +110,7 @@ ok("登録しました" in ps.add_schedule("GD", date="2026-12-25", time="13:00"
 ok("解釈できません" in ps.add_schedule("x", date="2026/12/25"), "add 不正日付")
 ok("内容（タイトル）が空" in ps.add_schedule(""), "add 空タイトル")
 # forget
-ok("忘れました" in ps.forget("あやさん"), "forget 事実")
+ok("忘れました" in ps.forget("Aさん"), "forget 事実")
 ok("該当する記憶" in ps.forget("存在しないものzzz"), "forget 無し")
 ok("忘れました" in ps.forget("塾"), "forget 予定(タイトル)")
 # context_text（日付フォーマットがWindowsで落ちないか＝最重要）

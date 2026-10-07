@@ -38,7 +38,8 @@ import tools
 
 MODEL = "claude-haiku-4-5"
 BASE = Path(__file__).parent
-PERSONA_PATH = BASE / "persona.txt"
+# 人格。手元だけの persona.local.txt（コミットしない・名前や地名などの個人の事柄）があれば、そちらを使う
+PERSONA_PATH = BASE / ("persona.local.txt" if (BASE / "persona.local.txt").exists() else "persona.txt")
 ENV_PATH = BASE / ".env"
 
 

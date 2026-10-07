@@ -11,7 +11,7 @@
 1. **内部プロンプトを英語化**（日本語は1字1〜2トークン、英語は約4字1トークン＝1/6〜1/8）。
    ツール定義の説明・[Hard rules]・[Capabilities]メニュー・context_textのラベルを英語に。
    **ユーザーへの返答は日本語＋人格を維持**（_RULESに「Always reply in Japanese, in character」明記）。
-   人格(persona)の声・お手本・データ値（茨木/塾/曜日/config キー）は日本語のまま。
+   人格(persona)の声・お手本・データ値（大阪/塾/曜日/config キー）は日本語のまま。
 2. **詰め＋重複削除**: ツール説明を最小化（使い所は人格/メニューに集約）。launch_app候補は名前のみ列挙
    （エイリアスは実行時リゾルバが解決するので不要）。personaの[ふるまいの原則]はstatic_menuと重複→削除。
 3. **プロンプトキャッシュ**: system を2ブロックに分割。安定ブロック（[Hard rules]＋persona＋static_menu）に
