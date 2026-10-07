@@ -17,6 +17,9 @@ profile.json
 # マシン固有の自動生成設定（setup.py が再生成。ローカルパスを含むのでコミットしない）
 config.auto.json
 
+# 手元だけの上書き（学校の URL など。公開しない）
+config.local.json
+
 # OS
 Thumbs.db
 .DS_Store

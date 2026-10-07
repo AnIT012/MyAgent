@@ -4,8 +4,8 @@
 
 ## 課題
 同じ名前が「サイト」としても「Chrome PWAアプリ」としても存在することが多い。
-スキャンの結果、ユーザーのMacには `~/Applications/Chrome Apps.localized/` に PWA が 22 個あり、YouTube・Gmail・GitHub・moodle+R・manaba・カレンダー等が config の sites と被っている。
-「課題見よ」で `moodle+R.app`（専用ウィンドウ）を起動すべきか、`lms.ritsumei.ac.jp`（Chromeタブ）を開くべきか。
+スキャンの結果、ユーザーのMacには `~/Applications/Chrome Apps.localized/` に PWA が 22 個あり、YouTube・Gmail・GitHub・大学の Moodle・manaba・カレンダー等が config の sites と被っている。
+「課題見よ」で 大学の Moodle アプリ（専用ウィンドウ）を起動すべきか、大学の LMS のサイト（Chromeタブ）を開くべきか。
 
 ## 選択肢
 - A. アプリ優先（PWAがあれば起動）
